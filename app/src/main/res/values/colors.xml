@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_light">#F3E5F5</color> <!-- 浅紫色 (背景) -->
+    <color name="purple_active">#9C27B0</color> <!-- 深紫色 (选中) -->
+    <color name="purple_text_active">#FFFFFF</color> <!-- 选中后的文字颜色 -->
+    <color name="purple_text_inactive">#7B1FA2</color> <!-- 未选中时的文字颜色 -->
+</resources>
