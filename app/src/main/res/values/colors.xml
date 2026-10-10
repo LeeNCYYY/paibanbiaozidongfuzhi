@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_light">#F3E5F5</color> <!-- 浅紫色 (背景) -->
-    <color name="purple_active">#9C27B0</color> <!-- 深紫色 (选中) -->
-    <color name="purple_text_active">#FFFFFF</color> <!-- 选中后的文字颜色 -->
-    <color name="purple_text_inactive">#7B1FA2</color> <!-- 未选中时的文字颜色 -->
+    <color name="bg_ios">#F2F2F7</color>
+    <color name="card">#FFFFFF</color>
+    <color name="ios_blue">#007AFF</color>
+    <color name="ios_blue_pressed">#0066D6</color>
+    <color name="ios_blue_light">#EAF3FF</color>
+    <color name="ios_text">#1C1C1E</color>
+    <color name="ios_secondary">#8E8E93</color>
+    <color name="ios_separator">#E5E5EA</color>
+    <color name="ios_red">#FF3B30</color>
+    <color name="seg_bg">#E5E5EA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="ic_launcher_background">#F6F2EB</color>
 </resources>

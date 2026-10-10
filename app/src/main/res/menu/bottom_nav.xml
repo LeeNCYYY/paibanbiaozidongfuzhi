@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_import"
+        android:icon="@drawable/ic_tab_import"
+        android:title="文件导入" />
+    <item
+        android:id="@+id/nav_month"
+        android:icon="@drawable/ic_tab_month"
+        android:title="当月排班" />
+    <item
+        android:id="@+id/nav_day"
+        android:icon="@drawable/ic_tab_day"
+        android:title="当天排班" />
+</menu>

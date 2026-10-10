@@ -1,23 +1,17 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
+# 构建产物
+.gradle/
 build/
 app/build/
-captures
-.externalNativeBuild
-.cxx
-local.properties
-*.apk
-*.ap_
-*.dex
+_cls/
 *.class
-bin/
-gen/
-out/
+
+# 安装包(需要的话从 Releases 取)
+*.apk
+
+# 本机配置(SDK 路径等,因机器而异)
+local.properties
+
+# IDE
+.idea/
+*.iml
+.DS_Store

@@ -1,10 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">词条复制器</string>
-    <string name="import_file">导入表格</string>
-    <string name="today_view">当日信息</string>
-    <string name="all_data_view">全部数据</string>
-    <string name="no_file_selected">未选择文件</string>
-    <string name="no_today_data">未发现当日记录</string>
-    <string name="copy_success">已复制到剪贴板</string>
-    <string name="copy_btn">一键复制</string>
+    <string name="app_name">排班复制助手</string>
 </resources>
