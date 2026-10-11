@@ -58,7 +58,11 @@ public class CopyTextBuilder {
                 if (!text.isEmpty()) remarkLines.add(ScheduleModel.REMARK_LABEL + "：" + text);
                 continue;
             }
-            if (!text.isEmpty()) sb.append('\n').append(g.label).append('：').append(text);
+            if (!text.isEmpty()) {
+                // 值班组:复制时给"倒数第三人"缀上（值班室值守）;界面展示保持不变
+                if (ScheduleModel.isDutyLabel(g.label)) text = ScheduleModel.markThirdFromLast(text);
+                sb.append('\n').append(g.label).append('：').append(text);
+            }
         }
         if (guard != null && guard.length >= 2) {
             if (guardAmOn && !guard[0].isEmpty()) {

@@ -158,6 +158,18 @@ public class DesktopTest {
         check("非备注文本原样返回", "值班要求", ScheduleModel.stripRemarkPrefix("值班要求"));
         check("null 安全", "", ScheduleModel.stripRemarkPrefix(null));
 
+        System.out.println("== 值班室值守标记(倒数第三人,仅复制文本) ==");
+        check("5人", "张一、张二、张三（值班室值守）、张四、张五",
+                ScheduleModel.markThirdFromLast("张一、张二、张三、张四、张五"));
+        check("4人", "甲、乙（值班室值守）、丙、丁", ScheduleModel.markThirdFromLast("甲、乙、丙、丁"));
+        check("3人", "甲（值班室值守）、乙、丙", ScheduleModel.markThirdFromLast("甲、乙、丙"));
+        check("2人不足不加", "甲、乙", ScheduleModel.markThirdFromLast("甲、乙"));
+        check("1人不足不加", "甲", ScheduleModel.markThirdFromLast("甲"));
+        check("空文本", "", ScheduleModel.markThirdFromLast(""));
+        check("null", "", ScheduleModel.markThirdFromLast(null));
+        check("混合分隔符会规范化", "甲、乙（值班室值守）、丙、丁",
+                ScheduleModel.markThirdFromLast("甲，乙;丙 丁"));
+
         System.out.println("PASS=" + pass + "  FAIL=" + fail);
         if (fail > 0) System.exit(1);
     }

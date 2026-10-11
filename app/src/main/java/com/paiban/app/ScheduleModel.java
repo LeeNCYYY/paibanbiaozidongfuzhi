@@ -379,6 +379,28 @@ public class ScheduleModel {
         return sb.toString();
     }
 
+    /** 值班室值守标记:复制时缀在值班组名单"倒数第三人"后面(界面展示不受影响) */
+    public static final String DUTY_ROOM_MARK = "（值班室值守）";
+
+    /**
+     * 在名单的倒数第三人名字后面缀上"（值班室值守）"。
+     * 名单不足 3 人(不存在倒数第三人)时原样返回。
+     * 只用于复制文本,界面展示不变。
+     */
+    public static String markThirdFromLast(String names) {
+        if (names == null) return "";
+        List<String> all = splitNames(names);
+        if (all.size() < 3) return names;
+        int target = all.size() - 3;
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < all.size(); i++) {
+            if (sb.length() > 0) sb.append('、');
+            sb.append(all.get(i));
+            if (i == target) sb.append(DUTY_ROOM_MARK);
+        }
+        return sb.toString();
+    }
+
     /** 该单元格文本是否以"备注"开头(此时表头列名作废,该行标题改用"备注") */
     public static boolean isRemarkEntry(String text) {
         if (text == null) return false;
