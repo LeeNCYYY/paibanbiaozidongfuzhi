@@ -1,0 +1,21 @@
+# 构建产物
+.gradle/
+build/
+app/build/
+_cls/
+*.class
+
+# 安装包(需要的话从 Releases 取)
+*.apk
+
+# 本机排班数据，避免真实姓名或联系方式被误提交
+*.xls
+*.xlsx
+
+# 本机配置(SDK 路径等,因机器而异)
+local.properties
+
+# IDE
+.idea/
+*.iml
+.DS_Store
